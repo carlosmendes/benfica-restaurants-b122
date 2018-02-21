@@ -1,5 +1,5 @@
 class RestaurantsController < ApplicationController
-  before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
+  before_action :set_restaurant, only: [:show, :edit, :update, :destroy, :chef]
 
   def index
     @restaurants = Restaurant.all
@@ -37,6 +37,15 @@ class RestaurantsController < ApplicationController
     @restaurant.destroy
 
     redirect_to restaurants_url
+  end
+
+  def top
+    # find the restaurants with 5 stars
+    @restaurants = Restaurant.where(stars: 5)
+  end
+
+  def chef
+
   end
 
   private

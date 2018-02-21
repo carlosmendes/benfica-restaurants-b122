@@ -7,13 +7,15 @@ restaurants_attributes = [
     name:         'Catedral',
     address:      'Benfica Stadium',
     description:  'Great to see Benfica games',
-    stars:        5
+    stars:        5,
+    chef:         'Irina'
   },
   {
     name:         'Maracanã',
     address:      'Picoas, Lisbon',
     description:  'Average to see Benfica games',
-    stars:        2
+    stars:        2,
+    chef:         'Marta'
   }
 ]
 Restaurant.create!(restaurants_attributes)
